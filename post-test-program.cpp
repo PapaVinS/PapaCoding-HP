@@ -1,6 +1,7 @@
 #include <iostream>
 #include <math.h>
 #include <conio.h>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -10,26 +11,26 @@ int main()
     char menu;
     
     cout << "-----------------------" << endl;
-    cout << "Nama : Raditya" << endl;
+    cout << "Name : PapaVinS" << endl;
     cout << "NIM  : 228" << endl;
-    cout << "Menu Program :" << endl;
-    cout << "1. Menghitung Faktorial\n";
+    cout << "Program Menu :" << endl;
+    cout << "1. Count Factorial\n";
     cout << "2. Binary to Decimal\n";
-    cout << "3. Check Bilangan Prima\n";
-    cout << "4. Deret Bilangan Prima\n";
-    cout << "5. Tutup Program\n";
+    cout << "3. Check Prime Number\n";
+    cout << "4. Series Prime Number\n";
+    cout << "5. Close Program\n";
     cout << "-----------------------";
     cout << "\n\n";
-    cout << "INPUT PILIHAN ANDA = ";
+    cout << "Choose your program (1,2,3,4,5) = ";
     cin >> menu;
 
 switch(menu){
     case '1': 
     int b,c;
-        cout<<"masukkan bilangan yang akan difaktorialkan: ";
+        cout<<"Enter the number that about to be factored: ";
         cin>>b;
         c=b;
-        cout<<"bilangan ="<<b<<endl;
+        cout<<"number ="<<b<<endl;
         cout<<b<<"! = ";
         for(int i=1;i<=b;i++){
             cout<<i;
@@ -68,38 +69,38 @@ switch(menu){
     }
     case '3':   
         int bil, jum, i;
-            cout << "Masukkan bilangan bulat positif : ";
+            cout << "Enter the positive integer : ";
             cin >> bil;
             jum = 0;
     for (i=1; i<=bil; i++)
         if (bil%i==0)
             jum++;
             if (jum==2)
-                cout << "Bilangan tersebut adalah bilangan prima \n";
+                cout << "This number is a prime number \n";
             else
-                cout << "Bukan bilangan prima \n";
+                cout << "This is not a prime number \n";
             return 0;
     break;
 
     case '4':
 
-    int batas, x, cek;
+    int limit, x, check;
 
-        cout<<"\n Tampilkan Sampai Batas Atas Bilangan Prima : ";
-        cin>>batas;
+        cout<<"\n Enter the upper limit of prime numbers : ";
+        cin>>limit;
         cout<<endl;
-        cout<<" Deret Bilangan Prima Dari 1 - "<<batas<<" Adalah: "<<endl<<endl;
-    for (x = 2; x<=batas; x++)
+        cout<<" Series of prime numbers from 1 - "<<limit<<" Is: "<<endl<<endl;
+    for (x = 2; x<=limit; x++)
     {
-        cek = 0;
+        check = 0;
     for (i = 2; i < x; i++)
         {
             if (x % i == 0)
         {
-          cek = 1;
+          check = 1;
         }
       }
-        if (cek == 0)
+        if (check == 0)
         {
             cout<<" "<<x<<",";
         }
@@ -109,6 +110,7 @@ switch(menu){
     break;
 
     case '5':
+        exit (EXIT_FAILURE);
     return 0;
     }    
 }
