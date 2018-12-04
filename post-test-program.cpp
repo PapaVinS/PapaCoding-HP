@@ -68,14 +68,14 @@ switch(menu){
         break;
     }
     case '3':   
-        int bil, jum, i;
+        int num, res, i;
             cout << "Enter the positive integer : ";
-            cin >> bil;
-            jum = 0;
-    for (i=1; i<=bil; i++)
-        if (bil%i==0)
-            jum++;
-            if (jum==2)
+            cin >> num;
+            res = 0;
+    for (i=1; i<=num; i++)
+        if (num%i==0)
+            res++;
+            if (res==2)
                 cout << "This number is a prime number \n";
             else
                 cout << "This is not a prime number \n";
