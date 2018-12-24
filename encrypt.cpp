@@ -16,7 +16,7 @@ int main()
     for (int i=0; i<lenght;i++) {
         code = int (text[i])+key;
         if(code < 32)
-            code = code + 95;
+            code = code - 95;
         if(code > 126)
             code = code - 95;
         encrypted [i] = char(code);
